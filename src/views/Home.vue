@@ -43,11 +43,6 @@ const onSubmit = () => {
   const { data: pageData } = useRequest(getUserName);
   console.log(pageData);
 };
-const Login = login(() => {
-  getUserName().then((res) => {
-    console.log(res);
-  });
-});
 </script>
 <template>
   <div class="father">
