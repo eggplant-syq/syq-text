@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: "/test",
       name: "about",
-      component: () => import("../views/WareHouse.vue"),
+      component: () => import("../views/workTable.vue"),
     },
   ],
 });

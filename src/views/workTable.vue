@@ -1,7 +1,13 @@
 <template>
   <el-tabs :tab-position="tabPosition" style="height: 100%" class="demo-tabs">
-    <el-tab-pane label="工作台">工作台</el-tab-pane>
-    <el-tab-pane label="项目">项目</el-tab-pane>
+    <div>
+      <Icon
+      icon="fluent:phone-desktop-20-regular"/>
+    <el-tab-pane label="工作台" icon="fluent:phone-desktop-20-regular">工作台</el-tab-pane></div>
+    <div>
+    <Icon
+    icon="fa:file-text"/> 
+    <el-tab-pane label="项目">项目</el-tab-pane></div>
     <el-tab-pane label="AI">AI</el-tab-pane>
     <el-tab-pane label="事项">事项</el-tab-pane>
     <el-tab-pane label="代码">
@@ -23,10 +29,10 @@
             <div style="font-size: 14px">
               版本发布可以用来标记，发布代码版本
             </div>
-            <div style="display: flex; margin-left: 10vw">
+            <div style="display: flex; margin-left: 18vw">
               <div style="margin: 0 3vw">
                 <img src="../../public/images/1.svg" alt="" />
-                <div style="font-size: 20px">创建代码仓库</div>
+                <div style="font-size: 20px;margin-left: 20px;">创建代码仓库</div>
                 <div style="font-size: 12px; width: 180px">
                   浏览、编辑代码以及查看代码提交记录
                 </div>
@@ -50,8 +56,8 @@
           </div>
           <div
             style="
-              width: 8vw;
-              height: 4vw;
+              width: 10vw;
+              height: 3.5vw;
               font-size: 10px;
               text-align: center;
               background-color: black;
@@ -84,6 +90,7 @@
 import { ref } from "vue";
 import type { TabsInstance } from "element-plus";
 import type { TabsPaneContext } from "element-plus";
+import { Icon } from "@iconify/vue";
 
 const tabPosition = ref<TabsInstance["tabPosition"]>("left");
 
