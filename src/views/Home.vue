@@ -43,6 +43,9 @@ const onSubmit = () => {
   const { data: pageData } = useRequest(getUserName);
   console.log(pageData);
 };
+const login = () => {
+  window.location.href = "/test";
+};
 </script>
 <template>
   <div class="father">
