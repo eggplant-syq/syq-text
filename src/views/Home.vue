@@ -50,24 +50,30 @@ const login = () => {
 <template>
   <div class="father">
     <div class="left">
-       <a-carousel autoplay>
-        <div><img src="../../public/images/1.png" width="100%"/></div>
-        <div><img src="../../public/images/2.png"  width="100%"/></div>
-        <div><img src="../../public/images/3.png"  width="100%"/></div>
+      <a-carousel autoplay>
+        <div><img src="../../public/images/1.png" width="100%" /></div>
+        <div><img src="../../public/images/2.png" width="100%" /></div>
+        <div><img src="../../public/images/3.png" width="100%" /></div>
       </a-carousel>
     </div>
 
     <form @submit.prevent="onSubmit" class="right">
-      <h1 class="text" style="margin-top: 10px;">登录，即刻创造您的应用</h1>
+      <h1 class="text" style="margin-top: 10px">登录，即刻创造您的应用</h1>
       <div class="qqq">
         <input
           class="username"
           type="text"
           id="username"
           v-model="username"
-          placeholder="账号 ："
+          placeholder="3174961601@qq.com"
           required
           pattern="[a-zA-Z0-9]{5,8}"
+          style="
+            border-color: gray;
+            width: 300px;
+            height: 50px;
+            border-radius: 5px;
+          "
         />
         <span v-if="usernameError" class="error">{{ usernameError }}</span>
       </div>
@@ -77,9 +83,10 @@ const login = () => {
           type="password"
           id="password"
           v-model="password"
-          placeholder="密码 ："
+          placeholder="1433223520."
           required
           pattern="[a-zA-Z0-9]{5,12}"
+          style="width: 300px; height: 50px; border-radius: 5px"
         />
         <span v-if="passwordError" class="error">{{ passwordError }}</span>
       </div>
@@ -89,12 +96,14 @@ const login = () => {
           id="checkbox"
           v-model="checked"
           class="checkbox"
-          style="margin-top: 20px;"
-        />我已阅读并同意<a href="#">服务协议</a>和<a href="#">隐私政策</a>
+          style="margin-top: 20px"
+        />我已阅读并同意<a href="#" style="color: blue;">服务协议</a>和<a href="#" style="color: blue; " >隐私政策</a>
       </div>
 
       <div class="dl" type="submit" @click="login">登录</div>
-      <div style="margin-left: 270px;margin-top: 10px;">还未注册?<a href="#">立即注册</a></div>
+      <div style="margin-left: 270px; margin-top: 10px">
+        还未注册?<a href="#" style="color: blue;">立即注册</a>
+      </div>
     </form>
   </div>
 </template>
@@ -134,7 +143,7 @@ const login = () => {
   width: 160px;
 }
 .qqq {
-  padding-left: 260px;
+  padding-left: 200px;
   margin-top: 10px;
 }
 .dl {
@@ -156,7 +165,7 @@ const login = () => {
   text-align: center;
   height: 160px;
   line-height: 160px;
-  background: #364d79;
+  background: #fcfcfc;
   overflow: hidden;
 }
 :deep(.slick-slide h3) {
